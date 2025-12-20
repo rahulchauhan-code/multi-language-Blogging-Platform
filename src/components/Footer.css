@@ -1,0 +1,95 @@
+/* --- Base Mobile Styles (Default) --- */
+
+/* Wrapper to handle positioning */
+.footer-container {
+    width: 100%;
+    z-index: 1030; /* Bootstrap standard z-index for fixed elements */
+    background-color: transparent; /* Let the content handle the color */
+    pointer-events: none; /* Allows clicking through empty space on desktop */
+}
+
+/* The actual bar itself */
+.footer-content {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #dee2e6;
+    pointer-events: auto; /* Re-enable clicking */
+    transition: all 0.3s ease;
+}
+
+/* Navigation Items */
+.nav-item {
+    text-decoration: none;
+    color: #6c757d; /* Muted gray for inactive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: color 0.2s ease;
+}
+
+.nav-item .icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.nav-item .label {
+    font-size: 0.75rem; /* 12px is better for readability than 10px */
+    font-weight: 500;
+}
+
+/* Active State (Visual Feedback) */
+.nav-item.active {
+    color: #000; /* Darker color for active */
+}
+.nav-item.active .icon {
+    transform: scale(1.1); /* Slight pop effect */
+}
+
+/* --- The Create Post "FAB" (Floating Action Button) Style --- */
+.nav-item.create-post {
+    flex: 0 0 auto; /* Don't stretch */
+}
+
+.plus-icon {
+    font-size: 2.5rem;
+    color: #0d6efd; /* Bootstrap Primary Blue */
+    line-height: 0;
+    margin-top: -10px; /* Slight lift */
+    transition: transform 0.2s;
+}
+
+.nav-item.create-post:hover .plus-icon {
+    transform: rotate(90deg); /* Cool rotation effect on hover */
+}
+
+/* --- Responsive Design for Tablet & Desktop --- */
+@media (min-width: 768px) {
+    .footer-container {
+        /* On desktop, we float it slightly above the bottom */
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content {
+        /* Constrain width so it looks like a "Dock" */
+        width: 100%;
+        max-width: 500px; 
+        border-radius: 50px; /* Rounded pill shape */
+        border: 1px solid #e0e0e0;
+        padding: 0.8rem 2rem;
+    }
+
+    /* Add hover effects for mouse users */
+    .nav-item:hover {
+        color: #0d6efd;
+        background-color: rgba(13, 110, 253, 0.05); /* Very light blue bg */
+        border-radius: 10px;
+    }
+}
