@@ -14,7 +14,17 @@ const Navbar = () => {
         en: 'English',
         hi: 'Hindi',
         es: 'Spanish',
-        fr: 'French'
+        fr: 'French',
+        de: 'German',
+        pt: 'Portuguese',
+        ru: 'Russian',
+        ar: 'Arabic',
+        zh: 'Chinese',
+        ja: 'Japanese',
+        it: 'Italian',
+        ko: 'Korean',
+        nl: 'Dutch',
+        tr: 'Turkish'
     };
 
     const [selectedLang, setSelectedLang] = useState({ code: 'en', name: 'English' });
@@ -57,6 +67,16 @@ const Navbar = () => {
                             <NavDropdown.Item onClick={() => handleLanguageChange('hi', 'Hindi')}>Hindi (हिन्दी)</NavDropdown.Item>
                             <NavDropdown.Item onClick={() => handleLanguageChange('es', 'Spanish')}>Spanish (Español)</NavDropdown.Item>
                             <NavDropdown.Item onClick={() => handleLanguageChange('fr', 'French')}>French (Français)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('de', 'German')}>German (Deutsch)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('pt', 'Portuguese')}>Portuguese (Português)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('ru', 'Russian')}>Russian (Русский)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('ar', 'Arabic')}>Arabic (العربية)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('zh', 'Chinese')}>Chinese (中文)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('ja', 'Japanese')}>Japanese (日本語)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('it', 'Italian')}>Italian (Italiano)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('ko', 'Korean')}>Korean (한국어)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('nl', 'Dutch')}>Dutch (Nederlands)</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => handleLanguageChange('tr', 'Turkish')}>Turkish (Türkçe)</NavDropdown.Item>
                         </NavDropdown>
                         <span className="text-secondary text-center">
                             Hello, <strong className="text-dark">{user.username}</strong>

@@ -1,9 +1,8 @@
 import React from 'react';
-import './PostCard.css'; // Optional: for the hover animation
+import './PostCard.css';
 
 const PostCard = ({ post }) => {
     
-    // Helper for safe date formatting
     const formatDate = (dateString) => {
         if (!dateString) return 'Just now';
         return new Date(dateString).toLocaleDateString('en-US', {
@@ -56,7 +55,6 @@ const PostCard = ({ post }) => {
                     {post.content}
                 </p>
 
-                {/* Optional: Read More link (Visually distinct) */}
                 <div className="mt-3">
                     <small className="text-primary fw-bold">Read Article &rarr;</small>
                 </div>
